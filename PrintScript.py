@@ -68,7 +68,7 @@ def process_excel(file):
         dframe['Journalists'] = dframe['Journalists'].str.lstrip()
 
         # Read additional data for merging
-        data2 = pd.read_excel(r"D:\Akshay.Annaldasula\OneDrive - Adfactors PR Pvt Ltd\Documents\FActiva Publications.xlsx")
+        data2 = pd.read_excel(r"FActiva Publications.xlsx")
         
         # Merge the current dataframe with additional data
         merged = pd.merge(dframe, data2, how='left', left_on=['Source'], right_on=['Source'])
