@@ -102,6 +102,9 @@ st.title("Print Excel File Processor & Merger")
 # Upload file
 uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx"])
 
+# Show the processed dataframe in the web app
+st.write(final_df)
+
 # Process the file if uploaded
 if uploaded_file is not None:
     processed_file = process_excel(uploaded_file)
