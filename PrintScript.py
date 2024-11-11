@@ -95,15 +95,15 @@ def process_excel(file):
     excel_writer.close()
     output.seek(0)
     return output
+    
+    # Show the processed dataframe in the web app
+    st.write(combined_data)
 
 # Streamlit app setup
 st.title("Print Excel File Processor & Merger")
 
 # Upload file
 uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx"])
-
-# Show the processed dataframe in the web app
-st.write(combined_data)
 
 # Process the file if uploaded
 if uploaded_file is not None:
