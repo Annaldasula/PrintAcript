@@ -3,6 +3,9 @@ import pandas as pd
 import numpy as np
 from io import BytesIO
 
+# Streamlit app with a sidebar layout
+st.set_page_config(layout="wide")
+
 # Function to process the Excel file
 def process_excel(file):
     # Initialize Excel writer
