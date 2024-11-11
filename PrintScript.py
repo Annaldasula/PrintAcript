@@ -90,15 +90,17 @@ def process_excel(file):
 
     # Save the combined data to a new sheet
     combined_data.to_excel(excel_writer, sheet_name='Combined_All_Sheets', index=False)
+    
+    # Show the processed dataframe in the web app
+    st.write(combined_data)
+
 
     # Save and return the Excel file
     excel_writer.close()
     output.seek(0)
     return output
     
-    # Show the processed dataframe in the web app
-    st.write(combined_data)
-
+    
 # Streamlit app setup
 st.title("Print Excel File Processor & Merger")
 
