@@ -97,7 +97,7 @@ def process_excel(file):
     return output
 
 # Streamlit app setup
-st.title("Excel File Processor & Merger")
+st.title("Print Excel File Processor & Merger")
 
 # Upload file
 uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx"])
